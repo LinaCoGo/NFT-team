@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  color: white;
+  background-color: black;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+img {
+  border-radius: 5px;
+}
+
+button {
+  position: relative;
+  bottom: 22%;
+}
+
+/* Video settings  */
+.app_videos {
+  position: relative;
+  height: 750px;
+  background-color: white;
+  overflow: scroll;
+  width: 100%;
+  max-width: 400px;
+  scroll-snap-type: y mandatory;
+  border-radius: 20px;
+}
+
+/* To remove the scroll bar */
+.app_videos:: -webkit-scrollbar {
+  display: none;
+}
+
+.app_videos {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.video {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  scroll-snap-align: start;
+}
+
+.video_player {
+  object-fit: cover;
+  /* sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container. */
+  width: 100%;
+  height: 100%;
+}
+
+.videoSidebar {
+  position: absolute;
+  top: 48%;
+  right: 10px;
+}
+
+.videoSidebar .material-icons {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.videoSidebar_button {
+  padding: 20px;
+  text-align: center;
+}
+
+.videoFooter {
+  position: relative;
+  background-color: black;
+  bottom: 150px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 0px;
+  color: white;
+  display: flex;
+}
+
+@keyframes spinTheRecord {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.videoFooter_record {
+  animation: spinTheRecord infinite 5s linear;
+  height: 50px;
+  filter: invert(1);
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+.videoFooter_text {
+  flex: 1;
+}
+
+.videoFooter_text h3 {
+  padding-bottom: 0px;
+}
+
+.videoFooter_icon {
+  position: absolute;
+}
+
+.videoFooter_ticker {
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.videoFootter_ticher marquee {
+  height: fit-content;
+  margin-left: 30px;
+  width: 60%;
+}
+
+.videoFooter_description {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  .app_videos {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+
+/* Image settings */
+.image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  scroll-snap-align: start;
+}
+
+.image_display {
+  object-fit: contain;
+  /* sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container. */
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+
+.btn-group {
+  position: relative;
+}
+
+.btn-group .button {
+  background-color: #9400D3;
+  /* Green */
+  border: none;
+  margin: 5px;
+  color: white;
+  padding: 11.5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: center;
+  border-radius: 7px;
+}
+
+.btn-group .button:hover {
+  background-color: #800080;
+}
